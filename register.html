@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/bootstrap.css">
     <title>Register</title>
 </head>
 <body>
@@ -14,10 +15,46 @@
                 <a href="register.html">Register</a>
             </nav>
     </header>
-    <main>
+    <main class="container">
         <h2>Register a new pet</h2>
+        <div class="">
+            <div class="mb-3">
+                <label for="name">Name</label>
+                <input class="form-control" type="text" id="txtName" />
+            </div>
+            <div class="mb-3">
+                <label for="age">Age</label>
+                <input class="form-control" type="number" id="txtAge" min="0" />
+            </div>
+            <div class="mb-3">
+                <label for="">Gender:</label>
+                <select class="form-control" id="txtGender">
+                    <option value="" disabled selected>-- Select a Gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="">Breed:</label>
+                <input class="form-control" type="text" id="txtBreed" />
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="register()">Register</button>
+            </div>
+        </div>
+        <div id="display">
+        <p></p>
+        </div>
+
+        <div>
+            <h2>Registered pets</h2>
+            <div class="container row" id="petList">
+
+            </div>
+        </div>
     </main>
 
+    <script src="./scripts/display.js"></script>
     <script src="./scripts/register.js"></script>
     
 </body>
